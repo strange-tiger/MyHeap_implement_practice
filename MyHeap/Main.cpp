@@ -1,6 +1,10 @@
 #include "MyHeap.h"
 #include <iostream>
 
+#include <queue>
+#include <vector>
+#include <functional>
+
 int main()
 {
 	Heap heap;
@@ -15,4 +19,7 @@ int main()
 		std::cout << heap.top() << ' ';
 		heap.pop();
 	}
+
+	std::priority_queue<int> maxHeap;
+	std::priority_queue<int, std::vector<int>, std::greater<int>> minHeap;
 }
